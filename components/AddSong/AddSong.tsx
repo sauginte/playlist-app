@@ -48,7 +48,7 @@ const Add = ({ addSong }: AddSong) => {
         />
         <input
           type="text"
-          placeholder="Singer"
+          placeholder="Artist"
           value={artistInput}
           onChange={(e) => setArtistInput(e.target.value)}
         />
