@@ -1,21 +1,14 @@
-import { useState } from "react";
+import { PlaylistProps } from "@/types/playlist";
 import styles from "./styles.module.css";
 import heartFull from "../../assets/images/heart-full.svg";
 import heartOutline from "../../assets/images/heart-outline.svg";
-
-type PlaylistProps = {
-  id: string;
-  title: string;
-  artist: string;
-  isLiked: boolean;
-};
 
 type likeButtonProps = {
   song: PlaylistProps;
   onToggleLike: (id: string) => void;
 };
 
-const LoveButton = ({ song, onToggleLike }: likeButtonProps) => {
+const LikeButton = ({ song, onToggleLike }: likeButtonProps) => {
   return (
     <button onClick={() => onToggleLike(song.id)} className={styles.likeButton}>
       <img
@@ -26,4 +19,4 @@ const LoveButton = ({ song, onToggleLike }: likeButtonProps) => {
   );
 };
 
-export default LoveButton;
+export default LikeButton;

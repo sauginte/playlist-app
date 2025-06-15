@@ -1,15 +1,9 @@
+import { PlaylistProps } from "@/types/playlist";
 import { useState } from "react";
 import styles from "./styles.module.css";
 import Song from "../Song/Song";
 import AddSong from "../AddSong/AddSong";
 import FilterSongs from "../FilterSongs/FilterSongs";
-
-type PlaylistProps = {
-  id: string;
-  title: string;
-  artist: string;
-  isLiked: boolean;
-};
 
 const Playlist = ({ playlist: newPlaylist }: { playlist: PlaylistProps[] }) => {
   const [allSongs, setAllSongs] = useState<PlaylistProps[]>(newPlaylist);

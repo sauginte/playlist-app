@@ -1,13 +1,7 @@
+import { PlaylistProps } from "@/types/playlist";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import styles from "./styles.module.css";
-
-type PlaylistProps = {
-  id: string;
-  title: string;
-  artist: string;
-  isLiked: boolean;
-};
 
 type AddSong = {
   addSong: (newSong: PlaylistProps) => void;
@@ -16,17 +10,23 @@ type AddSong = {
 const Add = ({ addSong }: AddSong) => {
   const [titleInput, setTitleInput] = useState("");
   const [artistInput, setArtistInput] = useState("");
+  const [imgInput, setImgInput] = useState("");
   const [error, setError] = useState("");
 
   const onClick = () => {
-    if (titleInput.length < 5 || artistInput.length < 5) {
-      setError("Song name or singer value is too short");
+    if (
+      titleInput.length < 5 ||
+      artistInput.length < 5 ||
+      imgInput.length < 5
+    ) {
+      setError("Please fill all fields");
     } else {
       const newSong = {
         id: uuidv4(),
         title: titleInput,
         artist: artistInput,
         isLiked: false,
+        imgUrl: imgInput,
       };
 
       addSong(newSong);
@@ -34,6 +34,7 @@ const Add = ({ addSong }: AddSong) => {
 
     setTitleInput("");
     setArtistInput("");
+    setImgInput("");
   };
   return (
     <div>
@@ -50,6 +51,12 @@ const Add = ({ addSong }: AddSong) => {
           placeholder="Singer"
           value={artistInput}
           onChange={(e) => setArtistInput(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Song cover URL"
+          value={imgInput}
+          onChange={(e) => setImgInput(e.target.value)}
         />
       </div>
       <div className={styles.addSong}>

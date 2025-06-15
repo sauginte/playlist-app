@@ -1,13 +1,7 @@
+import { PlaylistProps } from "@/types/playlist";
 import { useState } from "react";
 import styles from "./styles.module.css";
-import LoveButton from "../LoveButton/LoveButton";
-
-type PlaylistProps = {
-  id: string;
-  title: string;
-  artist: string;
-  isLiked: boolean;
-};
+import LikeButton from "../LikeButton/LikeButton";
 
 type MainProps = {
   playlist: PlaylistProps[];
@@ -33,11 +27,16 @@ const Song = ({ playlist, setPlaylist }: MainProps) => {
       {displaySongs.map((song) => {
         return (
           <div className={styles.songWrapper}>
-            <div className={styles.song}>
-              <h4>{song.title}</h4>
-              <p>{song.artist}</p>
+            <div className={styles.coverAndSongWrapper}>
+              <div className={styles.songCover}>
+                <img src={song.imgUrl} />
+              </div>
+              <div className={styles.song}>
+                <h4>{song.title}</h4>
+                <p>{song.artist}</p>
+              </div>
             </div>
-            <LoveButton song={song} onToggleLike={toggleLike} />
+            <LikeButton song={song} onToggleLike={toggleLike} />
           </div>
         );
       })}

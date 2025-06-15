@@ -13,10 +13,20 @@
   align-items: center;
   gap: 1rem;
 }
+.coverAndSongWrapper {
+  display: flex;
+}
+.songCover img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
 .song {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding-left: 0.5rem;
+  justify-content: center;
 
   p {
     font-size: 0.8rem;
