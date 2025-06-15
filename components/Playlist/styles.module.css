@@ -1,0 +1,15 @@
+.page {
+  display: flex;
+  justify-content: center;
+  padding: 5rem;
+}
+.wrapper {
+  width: 600px;
+  border: 1px solid black;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}

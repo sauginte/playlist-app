@@ -1,0 +1,24 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.songWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  align-items: center;
+  gap: 1rem;
+}
+.song {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  p {
+    font-size: 0.8rem;
+  }
+}

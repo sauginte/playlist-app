@@ -1,0 +1,8 @@
+.likeButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.heart {
+  width: 30px;
+}

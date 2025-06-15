@@ -1,0 +1,25 @@
+.buttonsWrapper {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+
+  button {
+    border: none;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+}
+.showAll {
+  background-color: rgba(210, 105, 30, 0.253);
+}
+.showAll:hover {
+  background-color: rgb(210, 105, 30);
+}
+
+.showFavourites {
+  background-color: rgba(144, 227, 141, 0.31);
+}
+.showFavourites:hover {
+  background-color: rgb(144, 227, 141);
+}

@@ -1,0 +1,42 @@
+.headline {
+  padding: 1rem 0;
+}
+.inputsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  input {
+    padding: 0.6rem;
+    border-radius: 0.5rem;
+    border: 0.5px solid black;
+  }
+}
+.addSong {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  padding: 1rem 0;
+}
+
+.addButton {
+  background-color: rgba(0, 128, 0, 0.257);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem;
+  cursor: pointer;
+}
+.addButton:hover {
+  background-color: rgb(28, 211, 28);
+}
+
+.errorMessage {
+  width: 100%;
+  background-color: rgba(225, 25, 25, 0.298);
+  border: 1px solid red;
+  border-radius: 0.3rem;
+
+  p {
+    padding: 0.7rem;
+  }
+}
